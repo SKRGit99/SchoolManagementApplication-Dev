@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduLearn - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Top Navigation aligned left */
+    .top-nav {
+      display: flex;
+      justify-content: flex-start; /* align left */
+      background-color: #2c3e50;
+      padding: 10px;
+    }
+
+    .top-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-nav a:hover {
+      background-color: #34495e;
+    }
+
+    .top-nav a.active {
+      background-color: #04AA6D;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #04AA6D, #2c3e50);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    /* Content Section */
+    .content {
+      padding: 40px;
+    }
+
+    .content h2 {
+      color: #2c3e50;
+    }
+
+    /* Button */
+    button {
+      padding: 12px 24px;
+      background-color: #04AA6D;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #038c57;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <div class="top-nav">
+    <a href="#home" class="active" onclick="showMessage('Home')">Home</a>
+    <a href="#courses" onclick="showMessage('Courses')">Courses</a>
+    <a href="#admissions" onclick="showMessage('Admissions')">Admissions</a>
+    <a href="#faculty" onclick="showMessage('Faculty')">Faculty</a>
+    <a href="#contact" onclick="showMessage('Contact')">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to EduLearn</h1>
+    <p>Your gateway to quality education and lifelong learning.</p>
+    <button onclick="showMessage('Explore Courses')">Explore Courses</button>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content" id="content-area">
+    <h2>Home</h2>
+    <p>This is the home section of the education website. Navigate using the menus above.</p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showMessage(section) {
+      const contentArea = document.getElementById("content-area");
+      contentArea.innerHTML = `<h2>${section}</h2><p>You clicked on the ${section} menu.</p>`;
+    }
+  </script>
+
+</body>
+</html>
